@@ -13,9 +13,7 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
 a { color: #00e; }
-a:visited { color: #551a8b; }
 a:hover { color: #06e; }
-a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
@@ -68,10 +66,23 @@ td { vertical-align: top; }
 
 html, body {height: 100%;}
 
-#page {	height: auto !important;height: 100%;min-height: 100%;position: relative;margin: 0 auto;background:url(images/top-bg.png)(images/.png) left 120px repeat-x; }
-#page,footer {	min-width: 960px; _width:expression((documentElement.clientWidth||document.body.clientWidth)<960?'960px':'100%');}
-#bott_height {height: 220px;clear: both;}
-footer {position: relative;margin: -220px auto 0;height: 220px; background:url(images/bottom-bg.png) left top repeat-x;}
+
+#video {padding:13px 0 0 0;}
+.activemovie {margin:0 0 10px;}
+.activemovie h3 {font:bold 24px Arial, Helvetica, sans-serif;color:#000;margin:0 0 10px;}
+.mediacontainer {margin:0 auto;width:745px;}
+#video_list ul {padding:0;margin:0 0 0 -3px;list-style:none;}
+.wrap {margin:0 0 0 125px;display:block;}
+#video_list ul li {width:371px;margin:0 0 15px 3px;display:inline-block;vertical-align:top;}
+#video_list ul li a {display:block;text-decoration:none;}
+#video_list ul li a span {text-decoration:none;}
+#video_list ul li a strong {text-decoration:none;color:#333;font:bold 12px Arial, Helvetica, sans-serif;display:block;margin:0 5px 0px 0;}
+#video_list ul li a:hover strong {text-decoration:underline;}
+#video_list ul li a .author {display:block;color:#666666;font:normal 11px/15px Arial, Helvetica, sans-serif;}
+#video_list ul li a .viewCount, #video_list ul li a .date {color:#666666;font:normal 11px/15px Arial, Helvetica, sans-serif;display:block;}
+#video_list ul li a .thumbnail_wrapper {position:relative;display:block;height:68px;overflow:hidden;float:left;margin:0 5px 0 0;}
+#video_list ul li a .thumbnail_wrapper time {position:absolute;right:3px;bottom:3px;font:normal 11px/14px Arial, Helvetica, sans-serif;color:#fff;background:#000;border-radius:3px;display:block;height:14px;opacity:0.75;padding: 0 4px;}
+#video_list ul li a .thumbnail_wrapper img {display:block;margin:-11px 0 0 0;width:120px;height:90px;}
 
 
 
