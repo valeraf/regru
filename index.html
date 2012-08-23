@@ -13,17 +13,21 @@
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/libs/modernizr.js"></script>
+<script src="js/libs/jquery.js"></script>
+<script src="js/script.js"></script>
 </head>
 <body>
 <div class="clearfix mediacontainer">
 	<div id="video">
-    	
-    </div>
-    <div id="video_list" class="clearfix">
-    	
-    </div>
+    
+    <object id="player"></object>
+	</div>
+	<div id="video_list"></div>
+    <script 
+        type="text/javascript" 
+        src="http://gdata.youtube.com/feeds/users/regruvideo/uploads?alt=json-in-script&callback=showVideos&max-results=30">
+    </script>
 </div>
-<script src="js/libs/jquery.js"></script> 
 <script src="js/script.js"></script>
 </body>
 </html>

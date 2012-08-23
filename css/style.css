@@ -67,22 +67,22 @@ td { vertical-align: top; }
 html, body {height: 100%;}
 
 
-#video {padding:13px 0 0 0;}
-.activemovie {margin:0 0 10px;}
+#video {padding:0;min-height:493px;margin:0px 0 10px;}
+.activemovie {}
 .activemovie h3 {font:bold 24px Arial, Helvetica, sans-serif;color:#000;margin:0 0 10px;}
 .mediacontainer {margin:0 auto;width:745px;}
 #video_list ul {padding:0;margin:0 0 0 -3px;list-style:none;}
 .wrap {margin:0 0 0 125px;display:block;}
-#video_list ul li {width:371px;margin:0 0 15px 3px;display:inline-block;vertical-align:top;}
-#video_list ul li a {display:block;text-decoration:none;}
-#video_list ul li a span {text-decoration:none;}
-#video_list ul li a strong {text-decoration:none;color:#333;font:bold 12px Arial, Helvetica, sans-serif;display:block;margin:0 5px 0px 0;}
-#video_list ul li a:hover strong {text-decoration:underline;}
-#video_list ul li a .author {display:block;color:#666666;font:normal 11px/15px Arial, Helvetica, sans-serif;}
-#video_list ul li a .viewCount, #video_list ul li a .date {color:#666666;font:normal 11px/15px Arial, Helvetica, sans-serif;display:block;}
-#video_list ul li a .thumbnail_wrapper {position:relative;display:block;height:68px;overflow:hidden;float:left;margin:0 5px 0 0;}
-#video_list ul li a .thumbnail_wrapper time {position:absolute;right:3px;bottom:3px;font:normal 11px/14px Arial, Helvetica, sans-serif;color:#fff;background:#000;border-radius:3px;display:block;height:14px;opacity:0.75;padding: 0 4px;}
-#video_list ul li a .thumbnail_wrapper img {display:block;margin:-11px 0 0 0;width:120px;height:90px;}
+#video_list ul li {width:371px;margin:0 0 15px 3px;display:inline-block;vertical-align:top;cursor:pointer;}
+#video_list ul li a {text-decoration:none;color:#333;}
+#video_list ul li span {text-decoration:none;}
+#video_list ul li strong {text-decoration:none;color:#333;font:bold 12px Arial, Helvetica, sans-serif;display:block;margin:0 5px 0px 0;}
+#video_list ul li :hover strong {text-decoration:underline;}
+#video_list ul li .author {display:block;color:#666666;font:normal 11px/15px Arial, Helvetica, sans-serif;}
+#video_list ul li .viewCount, #video_list ul li .date {color:#666666;font:normal 11px/15px Arial, Helvetica, sans-serif;display:block;}
+#video_list ul li .thumbnail_wrapper {position:relative;display:block;height:68px;overflow:hidden;float:left;margin:0 5px 0 0;}
+#video_list ul li .thumbnail_wrapper time {position:absolute;right:3px;bottom:3px;font:normal 11px/14px Arial, Helvetica, sans-serif;color:#fff;background:#000;border-radius:3px;display:block;height:14px;opacity:0.75;padding: 0 4px;}
+#video_list ul li .thumbnail_wrapper img {display:block;margin:-11px 0 0 0;width:120px;height:90px;}
 
 
 
