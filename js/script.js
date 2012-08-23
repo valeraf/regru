@@ -1,3 +1,5 @@
+$.videos = new Array();
+
 $.formatTime = function(seconds){
 	seconds = parseInt(seconds);
 	var minutes = Math.floor(seconds/60);
@@ -23,8 +25,10 @@ function showVideos(data) {
   for (var i = 0; i < entries.length; i++) {
     var entry = entries[i];
 	var id = entry.id.$t;
+	
 	var playerUrl = entries[i].media$group.media$content[0].url;
 	var id_clear = id.split('http://gdata.youtube.com/feeds/videos/')[1];
+	$.videos['#movie_'+id_clear] = entry;
     var title = entry.title.$t;
 	var date = new Date(entry.published.$t);
 	var item_date = date.toLocaleDateString();
@@ -44,7 +48,11 @@ function showVideos(data) {
   $('#video_list').html(list);
   
   if (entries.length > 0) {
-	var code = '<div id=\"movie_' + entries[0].id.$t.split('http://gdata.youtube.com/feeds/videos/')[1] + '\" class=\"activemovie\"><h3>'+ entries[0].title.$t +'</h3><object width=\"745\" height=\"448\"><param name=\"wmode\" value=\"opaque\" /><param name=\"movie\" value=' + entries[0].media$group.media$content[0].url + ' /><param name=\"allowFullScreen\" value=\"true\" /><param name=\"allowscriptaccess\" value=\"always\" /><embed src=' + entries[0].media$group.media$content[0].url + ' type=\"application/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"745\" height=\"448\" wmode=\"opaque\"></embed></object></div>';
+	var video_entry = entries[0];
+	if(window.location.hash != '' && $.videos[window.location.hash] != undefined){
+		video_entry = $.videos[window.location.hash];
+	}
+	var code = '<div id=\"movie_' + video_entry.id.$t.split('http://gdata.youtube.com/feeds/videos/')[1] + '\" class=\"activemovie\"><h3>'+ video_entry.title.$t +'</h3><object width=\"745\" height=\"448\"><param name=\"wmode\" value=\"opaque\" /><param name=\"movie\" value=' + video_entry.media$group.media$content[0].url + ' /><param name=\"allowFullScreen\" value=\"true\" /><param name=\"allowscriptaccess\" value=\"always\" /><embed src=' + video_entry.media$group.media$content[0].url + ' type=\"application/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"745\" height=\"448\" wmode=\"opaque\"></embed></object></div>';
 		$('#video').html(code);
   }
   
