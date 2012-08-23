@@ -73,9 +73,11 @@ html, body {height: 100%;}
 .mediacontainer {margin:0 auto;width:745px;}
 #video_list ul {padding:0;margin:0 0 0 -3px;list-style:none;}
 .wrap {margin:0 0 0 125px;display:block;}
+.lt-ie8 .wrap {margin-top:-4px;}
 #video_list ul li {width:371px;margin:0 0 15px 3px;display:inline-block;vertical-align:top;cursor:pointer;}
+.lt-ie8 #video_list ul li {display:inline;zoom:1;}
 #video_list ul li a {text-decoration:none;color:#333;}
-#video_list ul li span {text-decoration:none;}
+#video_list ul li span {text-decoration:none;cursor:pointer;}
 #video_list ul li strong {text-decoration:none;color:#333;font:bold 12px Arial, Helvetica, sans-serif;display:block;margin:0 5px 0px 0;}
 #video_list ul li :hover strong {text-decoration:underline;}
 #video_list ul li .author {display:block;color:#666666;font:normal 11px/15px Arial, Helvetica, sans-serif;}
