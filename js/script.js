@@ -30,8 +30,8 @@ function showVideos(data) {
 	var id_clear = id.split('http://gdata.youtube.com/feeds/videos/')[1];
 	$.videos['#movie_'+id_clear] = entry;
     var title = entry.title.$t;
-	var date = new Date(entry.published.$t);
-	var item_date = date.toLocaleDateString();
+	
+	
 	
 	var code = '<div id="movie_' + id_clear + '" class="activemovie"><h3>'+ entries[i].title.$t +'</h3><object width="745" height="448"><param name="wmode" value="opaque" /><param name="movie" value=' + playerUrl + ' /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed src=' + playerUrl + ' type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="745" height="448" wmode="opaque"></embed></object></div>';
 	
@@ -40,7 +40,10 @@ function showVideos(data) {
     var thumbnailUrl = entries[i].media$group.media$thumbnail[0].url;
 	var thumb = '<span class="thumbnail_wrapper"><img src="'+ thumbnailUrl +'" alt="'+ title +'" title="'+ title +'" /><time>'+ $.formatTime(time) +'</time></span>';	
 	var stat = entry.yt$statistics.viewCount;
+	
 	var uploader = entry.author[0].name.$t;
+	var date = new Date(entry.published.$t);
+	var item_date = date.toLocaleDateString();
 	var item_link = '<a href="#movie_'+ id_clear +'" class="clearfix" title="'+ title +'">'+ thumb +'<span class="wrap"><strong>'+ title +'</strong><span class="author">'+ uploader +'</span><span class="date">'+ item_date +'</span><span class="viewCount">'+ stat +' просмотров</span></span></a>'
 	list_elements += '<li>'+ item_link +'</li>';
   }
@@ -63,6 +66,7 @@ function showVideos(data) {
 }
 
 $(document).ready(function() {	
+$('#preloader').hide();
 $('#video_list li a').each(function(){
 		$(this).click(function(){
 			
