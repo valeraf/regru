@@ -83,7 +83,7 @@ html, body {height: 100%;}
 #video_list ul li :hover strong {text-decoration:underline;}
 #video_list ul li .author {display:block;color:#666666;font:normal 11px/15px Arial, Helvetica, sans-serif;}
 #video_list ul li .viewCount, #video_list ul li .date {color:#666666;font:normal 11px/15px Arial, Helvetica, sans-serif;display:block;}
-.lt-ie8 #video_list ul li .date {display:none;}
+.lt-ie8 #video_list ul li .date {}
 #video_list ul li .thumbnail_wrapper {position:relative;display:block;height:68px;overflow:hidden;float:left;margin:0 5px 0 0;}
 #video_list ul li .thumbnail_wrapper time {position:absolute;right:3px;bottom:3px;font:normal 11px/14px Arial, Helvetica, sans-serif;color:#fff;background:#000;border-radius:3px;display:block;height:14px;opacity:0.75;padding: 0 4px;}
 #video_list ul li .thumbnail_wrapper img {display:block;margin:-11px 0 0 0;width:120px;height:90px;}
